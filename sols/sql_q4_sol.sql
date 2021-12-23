@@ -1,3 +1,8 @@
-SELECT in_out,count(*)
-FROM player_in_out
-group by in_out
+SELECT 
+    play_stage, in_out, COUNT(*)
+FROM
+    player_in_out,
+    match_details
+GROUP BY play_stage , in_out;
+
+-- get stages and find out substitutions for each stage
